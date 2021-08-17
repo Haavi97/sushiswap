@@ -62,6 +62,17 @@ const config: HardhatUserConfig = {
       gasPrice: 120 * 1000000000,
       chainId: 1,
     },
+    sparta: {
+      url: process.env.SPARTAURL,
+      accounts,
+      chainId: parseInt(process.env.CHAINID),
+      live: true,
+      saveDeployments: true,
+      tags: ["staging"],
+      gasPrice: 20000000000,
+      gasMultiplier: 2,
+      timeout: 100000
+    },
     localhost: {
       live: false,
       saveDeployments: true,
